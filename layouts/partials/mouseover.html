@@ -1,0 +1,25 @@
+{{ if .Site.Data.homepage.mouseover.enable }}
+{{ with .Site.Data.homepage.mouseover }}
+<section class="bg-orange section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 text-center mb-5 mb-lg-0">
+        <div class="overlay-image">
+          <img class="image img-fluid" src="{{ .image | absURL }}" alt="{{ .imageDescription}}">
+          <div class="hover">
+            <img class="image img-fluid" src="{{ .imageOver | absURL }}" alt="{{ .imageDescription}}">
+          </div>
+         </div>
+      </div>
+      <div class="col-md-6 align-self-center text-center text-md-left">
+        <div class="content">
+          <h2 class="subheading text-white font-weight-bold pb-0">{{ .title | markdownify }}</h2>
+          <p class="text-white font-weight-bold mb-10">{{ .tagline | markdownify }}</p>
+          <p class="text-white">{{ .content | markdownify }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}

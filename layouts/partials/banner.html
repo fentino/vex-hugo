@@ -9,7 +9,8 @@
 			</div>
 			<div class="col-md-6 align-self-center text-center text-md-left">
 				<div class="block">
-					<h1 class="font-weight-bold mb-4 font-size-60">{{ .title | markdownify }}</h1>
+					<h1 class="font-weight-bold mb-4 font-size-50">{{ .title | markdownify }}</h1>
+					<h2 class="font-weight-bold mb-4 font-size-30">{{ .tagline | markdownify }}</h2>
 					<p class="mb-4">{{ .content | markdownify }}</p>
 					{{- end }}
 					<button class="snipcart-add-item btn btn-main" 
